@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\PalindromeController;
+use App\Http\Controllers\API\WordMergeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('palindrome', PalindromeController::class);
 Route::get('palindrome/{string}', PalindromeController::class);
+
+Route::get('merge', WordMergeController::class);
+Route::get('merge/{string}', WordMergeController::class);
