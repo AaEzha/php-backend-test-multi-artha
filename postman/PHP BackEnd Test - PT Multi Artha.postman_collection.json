@@ -499,7 +499,7 @@
 	"variable": [
 		{
 			"key": "uri",
-			"value": "http://localhost:8000/api"
+			"value": "https://php-backend-reza-nurfachmi.herokuapp.com/api"
 		}
 	]
 }
