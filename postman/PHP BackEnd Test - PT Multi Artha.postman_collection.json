@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "7b04559a-c84e-4034-8f79-989240c32408",
+		"name": "PHP BackEnd Test - PT Multi Artha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Palindrome Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{uri}}/palindrome/:string",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"palindrome",
+						":string"
+					],
+					"variable": [
+						{
+							"key": "string",
+							"value": "no lemons, no meloN"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Correct example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{uri}}/palindrome/:string",
+							"host": [
+								"{{uri}}"
+							],
+							"path": [
+								"palindrome",
+								":string"
+							],
+							"variable": [
+								{
+									"key": "string",
+									"value": "no lemons, no meloN"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 11:45:27 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 11:45:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"text\": \"no lemons, no meloN\",\n        \"status\": true\n    }\n}"
+				},
+				{
+					"name": "Wrong example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{uri}}/palindrome/:string",
+							"host": [
+								"{{uri}}"
+							],
+							"path": [
+								"palindrome",
+								":string"
+							],
+							"variable": [
+								{
+									"key": "string",
+									"value": "Mama lemon"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:40:39 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:40:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"text\": \"Mama lemon\",\n        \"status\": false\n    }\n}"
+				},
+				{
+					"name": "Empty string",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{uri}}/palindrome/:string",
+							"host": [
+								"{{uri}}"
+							],
+							"path": [
+								"palindrome",
+								":string"
+							],
+							"variable": [
+								{
+									"key": "string",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:41:09 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:41:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"text\": null,\n        \"status\": false\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Merge the Words",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{uri}}/merge/:string",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"merge",
+						":string"
+					],
+					"variable": [
+						{
+							"key": "string",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Correct example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{uri}}/merge/:string",
+							"host": [
+								"{{uri}}"
+							],
+							"path": [
+								"merge",
+								":string"
+							],
+							"variable": [
+								{
+									"key": "string",
+									"value": "\"ABBBAADA\", 2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:35:22 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:35:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"int\": \"2\",\n        \"input\": \"ABBBAADA\",\n        \"output\": [\n            \"AB\",\n            \"B\",\n            \"A\",\n            \"DA\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Wrong example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{uri}}/merge/:string",
+							"host": [
+								"{{uri}}"
+							],
+							"path": [
+								"merge",
+								":string"
+							],
+							"variable": [
+								{
+									"key": "string",
+									"value": "\"ABBBAADA\""
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:38:26 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:38:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"message\": \"Format data keliru\"\n    }\n}"
+				},
+				{
+					"name": "Empty string",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{uri}}/merge/:string",
+							"host": [
+								"{{uri}}"
+							],
+							"path": [
+								"merge",
+								":string"
+							],
+							"variable": [
+								{
+									"key": "string",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:38:56 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Sep 2021 14:38:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"message\": \"Data tidak boleh kosong\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "uri",
+			"value": "http://localhost:8000/api"
+		}
+	]
+}
