@@ -12,7 +12,7 @@ class PalindromeController extends Controller
     {
         $status = false;
 
-        $check = preg_replace('/[^A-Za-z0-9\-]/', '', $string);
+        $check = strtolower(preg_replace('/[^A-Za-z0-9\-]/', '', $string));
 
         if (strrev($check) == $check && strlen($check) >= 1) {
             $status = true;
